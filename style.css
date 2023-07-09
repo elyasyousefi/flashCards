@@ -1,0 +1,270 @@
+.header {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 2px;
+}
+button {
+  margin: 5px;
+  height: 36px;
+  background-color: darkgray;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #f96f6f;
+}
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+#inputfront,
+#inputback {
+  margin-right: 22px;
+  padding: 10px;
+  margin: 5px 0px 5px 5px;
+  margin-left: 0;
+}
+
+
+.form-items {
+  display: flex;
+  align-items: center;
+}
+.body-app {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.IpnutCard {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  align-items: center;
+}
+.LeftSide {
+  padding: 0px 40px;
+}
+
+.CardInfo {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  align-items: center;
+  align-content: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.CardList {
+  margin: 10px 5px;
+  overflow: auto;
+  height: 300px;
+  width: 500px;
+  text-align: -webkit-right;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition-duration: 300ms;
+}
+
+.card-front {
+  background-color: #00b9f9;
+  margin-bottom: 10px;
+}
+
+.card-back {
+  background-color: #f96f6f;
+}
+
+.MainCard {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.MainCard .card {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+}
+
+td,
+.del {
+  cursor: pointer;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 3px;
+  height: 16px;
+}
+.Table-Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+#mytable {
+  direction: rtl;
+  table-layout: inherit;
+  width: 100%;
+}
+
+#Table-Header-Title{
+  margin: 0;
+  text-align: center;
+}
+
+.showcolumn_div {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #9b9b9b;
+  justify-content: center;
+}
+
+
+#sh_label {
+  padding: 5px;
+  margin-right: 20px;
+}
+
+#mytable.mode-front td.Back-class,
+#mytable.mode-front th.Back-class {
+  display: none;
+}
+
+#mytable.mode-back td.Front-class,
+#mytable.mode-back th.Front-class {
+  display: none;
+}
+
+.MainCard {
+  perspective: 600px;
+  transform-style: preserve-3d;
+  transition-duration: 300ms;
+}
+
+.main-card-container {
+  perspective: 300px;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.MainCard .card-front {
+  transform: rotateY(0) translateZ(1px);
+}
+
+.MainCard .card-back {
+  transform: rotateY(180deg);
+}
+
+.mode-all .MainCard {
+  transform: rotateY(0deg);
+}
+
+.mode-all .MainCard .card-front {
+  transform: translateX(105px) rotateY(-10deg);
+}
+
+.mode-all .MainCard .card-back {
+  transform: translateX(-105px) rotateY(10deg);
+}
+
+.mode-front .MainCard {
+  transform: rotateY(0);
+}
+
+.mode-back .MainCard {
+  transform: rotateY(180deg);
+}
+
+input.input-Front,
+input.input-Back {
+  text-align: center;
+  direction: ltr;
+  width: auto;
+}
+
+.FrontDiv p,.BackDiv p  {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.FrontDiv,.BackDiv,.edit-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+.icons-Front,.icons-Back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.fa-square-check {
+  font-size: 22px;
+}
+
+.fa-rectangle-xmark {
+  font-size: 20px;
+}
+
+.fa-square-check:hover {
+  color: #06b31d;
+  font-weight: 600;
+  font-size: 22px;
+}
+.fa-rectangle-xmark:hover {
+  color: #da0a0a;
+  font-weight: 600;
+}
+
+.fa-trash-can:hover {
+  color: #da0a0a;
+}
+
+.fa-pen-to-square:hover {
+  color: #008cff;
+}
+
+.input-Front,
+.input-Back,
+.fa-square-check,
+.fa-rectangle-xmark {
+  display: none;
+}
+
+
+.edit-mode-off {
+  display: none;
+}
+
+.edit-mode-on,.Action-Div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
