@@ -122,10 +122,14 @@ function Addrow(data) {
   editFrontDiv.appendChild(inputFront);
   inputFront.value = CardsInfo[CardsInfo.length - 1].cardfront;
   inputFront.className = "input-Front";
+  inputFront.setAttribute('id', `${Math.random()}fontInput`);
+
 
   iconsFrontDiv = document.createElement("div");
   editFrontDiv.appendChild(iconsFrontDiv);
   iconsFrontDiv.className = "icons-Front";
+    inputBack.setAttribute('id', `${Math.random()}fontInput`);
+
 
   // Back info in table
   let RowBack = Row.insertCell();
@@ -151,6 +155,8 @@ function Addrow(data) {
   editBackDiv.appendChild(inputBack);
   inputBack.value = CardsInfo[CardsInfo.length - 1].cardback;
   inputBack.className = "input-Back";
+  inputBack.setAttribute('id', `${Math.random()}backInput`);
+
   //
   iconsBackDiv = document.createElement("div");
   editBackDiv.appendChild(iconsBackDiv);
