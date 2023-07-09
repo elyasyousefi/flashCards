@@ -209,11 +209,11 @@ tbody.addEventListener("click", (e) => {
   const row = e.target.closest("tr");
   const back = row.querySelector(".Back-Paragraph");
   const front = row.querySelector(".Front-Paragraph");
-  document.querySelector(".MainCard .card-front").innerText = front.innerText;
-  document.querySelector(".MainCard .card-back").innerText = back.innerText;
+  document.querySelector(".main-card .card-front").innerText = front.innerText;
+  document.querySelector(".main-card .card-back").innerText = back.innerText;
 });
 
-const frontCardEl = document.querySelector(".MainCard .card-front");
+const frontCardEl = document.querySelector(".main-card .card-front");
 frontCardEl.addEventListener("click", () => {
   const mode = document.querySelector(".main-card-container.mode-all");
   // if (mode != 'mode-all') {
@@ -225,7 +225,7 @@ frontCardEl.addEventListener("click", () => {
   // }
 });
 
-const backCardEl = document.querySelector(".MainCard .card-back");
+const backCardEl = document.querySelector(".main-card .card-back");
 backCardEl.addEventListener("click", () => {
   const mccEl = document.querySelector(".main-card-container");
   // change card style

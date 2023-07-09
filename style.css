@@ -6,9 +6,10 @@ body{
   padding: 0 4rem;
 }
 
-h3 {
+.title-last-card{
   text-align: center;
   margin: 0;
+  font-size: 1.5rem;
 }
 button {
   margin: 5px;
@@ -141,7 +142,7 @@ tr:nth-child(even) {
 }
 
 #table-header-title{
-  margin: 0.3rem 0;
+  margin: 0.4rem 0;
   text-align: center;
 }
 
@@ -149,12 +150,6 @@ tr:nth-child(even) {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-
-#input-label {
-  margin: 10px;
-  margin-right: 0;
 }
 
 #mytable.mode-front td.Back-class,
@@ -177,6 +172,7 @@ tr:nth-child(even) {
   perspective: 300px;
   transform-style: preserve-3d;
   position: relative;
+  margin: 1rem 0;
 }
 
 .main-card .card-front {
@@ -223,6 +219,7 @@ input.input-Back {
   justify-content: center;
   align-items: center;
   box-sizing: content-box;
+  width: auto;
 }
 
 .icons-Front,.icons-Back {
@@ -318,6 +315,47 @@ align-items: center;
 
 /* Media Queries */
 @media screen and (max-width: 480px) {
+  #inputfront, #inputback {
+   width: initial; 
+  }
+  .last-cards-body {
+    flex-direction: column;
+  }
+  body{
+    padding: 0 0.2rem;
+  }
+  .card {
+    width: 150px;
+    height: 35px;
+  }
+  .main-card .card {
+    height: 55px;
+  }
+  .body-app {
+    flex-direction: column;
+  }
+  .CardList {
+    width: 425px;
+    height: 200px;
+    margin: 5px;
+  }
+  .header {
+    margin: 0;
+  }
+  .input-lable {
+    display: none;
+  }
+  .title-last-card{
+    font-size: 0.8rem;
+  }
+
+  .mode-all .main-card .card-front {
+    transform: translateY(15x) rotateX(10deg);
+  }
+  
+  .mode-all .main-card .card-back {
+    transform: translateY(-15px) rotateX(-10deg);
+  }
 
 }
 
