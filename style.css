@@ -44,7 +44,6 @@ button {
 }
 .body-app {
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -101,14 +100,14 @@ button {
 
 }
 
-.MainCard {
+.main-card {
   position: relative;
   width: 200px;
   height: 300px;
   cursor: pointer;
 }
 
-.MainCard .card {
+.main-card .card {
   position: absolute;
   width: 200px;
   height: 300px;
@@ -141,12 +140,12 @@ tr:nth-child(even) {
   width: 100%;
 }
 
-#Table-Header-Title{
+#table-header-title{
   margin: 0;
   text-align: center;
 }
 
-.showcolumn_div {
+.showcolumn-div {
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #9b9b9b;
@@ -154,7 +153,7 @@ tr:nth-child(even) {
 }
 
 
-#sh_label {
+#input-label {
   margin: 10px;
   margin-right: 0;
 }
@@ -169,7 +168,7 @@ tr:nth-child(even) {
   display: none;
 }
 
-.MainCard {
+.main-card {
   perspective: 600px;
   transform-style: preserve-3d;
   transition-duration: 300ms;
@@ -181,31 +180,31 @@ tr:nth-child(even) {
   position: relative;
 }
 
-.MainCard .card-front {
+.main-card .card-front {
   transform: rotateY(0) translateZ(1px);
 }
 
-.MainCard .card-back {
+.main-card .card-back {
   transform: rotateY(180deg);
 }
 
-.mode-all .MainCard {
+.mode-all .main-card {
   transform: rotateY(0deg);
 }
 
-.mode-all .MainCard .card-front {
+.mode-all .main-card .card-front {
   transform: translateX(105px) rotateY(-10deg);
 }
 
-.mode-all .MainCard .card-back {
+.mode-all .main-card .card-back {
   transform: translateX(-105px) rotateY(10deg);
 }
 
-.mode-front .MainCard {
+.mode-front .main-card {
   transform: rotateY(0);
 }
 
-.mode-back .MainCard {
+.mode-back .main-card {
   transform: rotateY(180deg);
 }
 
