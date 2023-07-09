@@ -1,9 +1,9 @@
 .header {
   text-align: center;
-  margin: 2rem;
+  margin: 1rem;
 }
 body{
-  padding: 1rem 5rem;
+  padding: 0 4rem;
 }
 
 h3 {
@@ -44,7 +44,7 @@ button {
 }
 .body-app {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 .input-card {
@@ -102,15 +102,15 @@ button {
 
 .main-card {
   position: relative;
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 100px;
   cursor: pointer;
 }
 
 .main-card .card {
   position: absolute;
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 100px;
 }
 
 td,
@@ -141,14 +141,13 @@ tr:nth-child(even) {
 }
 
 #table-header-title{
-  margin: 0;
+  margin: 0.3rem 0;
   text-align: center;
 }
 
 .showcolumn-div {
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid #9b9b9b;
   justify-content: center;
 }
 
@@ -181,31 +180,31 @@ tr:nth-child(even) {
 }
 
 .main-card .card-front {
-  transform: rotateY(0) translateZ(1px);
+  transform: rotateX(0) translateZ(1px);
 }
 
 .main-card .card-back {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
 .mode-all .main-card {
-  transform: rotateY(0deg);
+  transform: rotateX(0deg);
 }
 
 .mode-all .main-card .card-front {
-  transform: translateX(105px) rotateY(-10deg);
+  transform: translateY(55px) rotateX(10deg);
 }
 
 .mode-all .main-card .card-back {
-  transform: translateX(-105px) rotateY(10deg);
+  transform: translateY(-55px) rotateX(-10deg);
 }
 
 .mode-front .main-card {
-  transform: rotateY(0);
+  transform: rotateX(0);
 }
 
 .mode-back .main-card {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
 input.input-Front,
@@ -281,7 +280,6 @@ input.input-Back {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 1rem;
 }
 .all-btn{
   display: flex;
@@ -314,8 +312,23 @@ align-items: center;
   flex-direction: column;
   margin:0 1rem;
 }
+.data-table {
+  padding: 0 1rem;
+}
 
 /* Media Queries */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 1280px) {
 
 }
