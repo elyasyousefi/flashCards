@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flash Memory Card</title>
-    <link rel="stylesheet" href="./FontAwesome/css/all.css" />
-    <script defer src="./script.js"></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="IpnutCard">
-      <div class="input-form">
-        <div class="header">
-          <h1>Flash Card</h1>
-        </div>
-        <div class="form-items">
-          <form action="" method="get">
-            <label for="inputfront">Front:</label>
-            <input
-              id="inputfront"
-              type="text"
-              name="fronttext"
-              placeholder=" Front of card"
-            />
-            <label for="inputback">Back:</label>
-            <input
-              id="inputback"
-              type="text"
-              name="backtext"
-              placeholder=" Back of card"
-            />
-          </form>
-          <button id="btn-save" type="submit" onclick="AddFromInput()">
-            Save
-          </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flash Memory Card</title>
+  <link rel="stylesheet" href="./FontAwesome/css/all.css" />
+  <script defer src="./script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="header">
+    <span class="header-tiltle">My Flash Cards</span>
+  </div>
+  <div class="IpnutCard">
+    <div class="input-form">
+      <div class="form-items">
+        <form action="" method="get">
+          <div class="input-values">
+            <div>
+              <label for="inputfront">Front:</label>
+              <input id="inputfront" type="text" name="fronttext" placeholder=" Front of card" />
+            </div>
+            <div>
+              <label for="inputback">Back:</label>
+              <input id="inputback" type="text" name="backtext" placeholder=" Back of card" />
+            </div>
+          </div>
+        </form>
+        <div class="all-btn">
           <button id="btn-clear" type="submit" onclick="clearText()">
             Clear
           </button>
+          <button id="btn-save" type="submit" onclick="AddFromInput()">
+            Save
+          </button>
         </div>
       </div>
-      <div class="LeftSide">
-        <h3>Last Card Entered</h3>
+    </div>
+    <div class="flex-center last-cards">
+      <h3>Last Card Entered</h3>
+      <div class="last-cards-body">
         <div class="card card-front">
           <p id="frontname">NameFront</p>
         </div>
@@ -51,67 +51,51 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="body-app">
-      <div class="data-table">
-        <!-- <div class="CardInfo"> -->
-        <div class="CardList">
-          <div class="Table-Header">
-            <h3 id="Table-Header-Title">Show cards info !</h3>
-            <div class="showcolumn_div">
-              <label id="sh_label" for="showall">Show Both</label><br />
-              <input
-                onclick="selectMode('all') "
-                type="radio"
-                id="showall"
-                name="ShowCardInfo"
-                value="Show All"
-              />
-              <label id="sh_label" for="frontshow">Front</label><br />
-              <input
-                onclick="selectMode('front')"
-                type="radio"
-                id="frontshow"
-                name="ShowCardInfo"
-                value="Front"
-                checked
-              />
-              <label id="sh_label" for="backshow">Back</label><br />
-              <input
-                onclick="selectMode('back')"
-                type="radio"
-                id="backshow"
-                name="ShowCardInfo"
-                value="Back"
-              />
-            </div>
+  <div class="body-app">
+    <div class="data-table">
+      <!-- <div class="CardInfo"> -->
+      <div class="CardList">
+        <div class="Table-Header">
+          <h3 id="Table-Header-Title">Show cards info !</h3>
+          <div class="showcolumn_div">
+            <label id="sh_label" for="showall">Show Both</label><br />
+            <input onclick="selectMode('all') " type="radio" id="showall" name="ShowCardInfo" value="Show All" />
+            <label id="sh_label" for="frontshow">Front</label><br />
+            <input onclick="selectMode('front')" type="radio" id="frontshow" name="ShowCardInfo" value="Front"
+              checked />
+            <label id="sh_label" for="backshow">Back</label><br />
+            <input onclick="selectMode('back')" type="radio" id="backshow" name="ShowCardInfo" value="Back" />
           </div>
-          <table id="mytable" class="mode-front">
-            <thead>
-              <tr>
-                <th>Action</th>
-                <th>Id</th>
-                <th class="Front-class" id="Frontid">Front</th>
-                <th class="Back-class" id="Backid">Back</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr></tr>
-            </tbody>
-          </table>
         </div>
+        <table id="mytable" class="mode-front">
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>Id</th>
+              <th class="Front-class" id="Frontid">Front</th>
+              <th class="Back-class" id="Backid">Back</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr></tr>
+          </tbody>
+        </table>
       </div>
-      <!-- </div> -->
-      <div class="main-card-container mode-front">
-        <div class="MainCard">
-          <div class="card card-front">
-            <p>Front Of Card</p>
-          </div>
-          <div class="card card-back">
-            <p>Back of Card</p>
-          </div>
+    </div>
+    <!-- </div> -->
+    <div class="main-card-container mode-front">
+      <div class="MainCard">
+        <div class="card card-front">
+          <p>Front Of Card</p>
+        </div>
+        <div class="card card-back">
+          <p>Back of Card</p>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

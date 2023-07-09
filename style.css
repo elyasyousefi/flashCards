@@ -1,10 +1,11 @@
 .header {
   text-align: center;
+  margin: 2rem;
 }
 
 h3 {
   text-align: center;
-  margin-bottom: 2px;
+  margin: 0;
 }
 button {
   margin: 5px;
@@ -14,8 +15,10 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
-button:hover {
-  background-color: #f96f6f;
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input-form {
   display: flex;
@@ -45,9 +48,6 @@ button:hover {
   justify-content: center;
   margin: 10px;
   align-items: center;
-}
-.LeftSide {
-  padding: 0px 40px;
 }
 
 .CardInfo {
@@ -87,11 +87,13 @@ button:hover {
 
 .card-front {
   background-color: #00b9f9;
-  margin-bottom: 10px;
+  margin: 0.2rem;
 }
 
 .card-back {
   background-color: #f96f6f;
+  margin: 0.2rem;
+
 }
 
 .MainCard {
@@ -268,4 +270,48 @@ input.input-Back {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.input-values{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.all-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#btn-save{
+  background-color: #06b31d;
+}
+button#btn-save:hover{
+  background-color:aquamarine;
+}
+#btn-clear{
+  background-color:darkgoldenrod;
+}
+button#btn-clear:hover{
+  background-color:coral;
+}
+.last-cards-body{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.header-tiltle{
+  font-size: x-large;
+  font-weight: bold;
+}
+.last-cards{
+  flex-direction: column;
+  margin:0 1rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 425px) {
+
 }
