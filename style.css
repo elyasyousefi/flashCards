@@ -147,8 +147,8 @@ tr:nth-child(even) {
 
 
 #sh_label {
-  padding: 5px;
-  margin-right: 20px;
+  margin: 10px;
+  margin-right: 0;
 }
 
 #mytable.mode-front td.Back-class,

@@ -59,6 +59,7 @@
           <div class="Table-Header">
             <h3 id="Table-Header-Title">Show cards info !</h3>
             <div class="showcolumn_div">
+              <label id="sh_label" for="showall">Show Both</label><br />
               <input
                 onclick="selectMode('all') "
                 type="radio"
@@ -66,7 +67,7 @@
                 name="ShowCardInfo"
                 value="Show All"
               />
-              <label id="sh_label" for="showall">Show All</label><br />
+              <label id="sh_label" for="frontshow">Front</label><br />
               <input
                 onclick="selectMode('front')"
                 type="radio"
@@ -75,7 +76,7 @@
                 value="Front"
                 checked
               />
-              <label id="sh_label" for="frontshow">Front</label><br />
+              <label id="sh_label" for="backshow">Back</label><br />
               <input
                 onclick="selectMode('back')"
                 type="radio"
@@ -83,7 +84,6 @@
                 name="ShowCardInfo"
                 value="Back"
               />
-              <label id="sh_label" for="javascript">Back</label>
             </div>
           </div>
           <table id="mytable" class="mode-front">
