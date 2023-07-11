@@ -2,15 +2,17 @@
   text-align: center;
   margin: 1rem;
 }
-body{
+
+body {
   padding: 0 4rem;
 }
 
-.title-last-card{
+.title-last-card {
   text-align: center;
   margin: 0;
   font-size: 1.5rem;
 }
+
 button {
   margin: 5px;
   height: 36px;
@@ -19,15 +21,18 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
+
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .input-form {
   display: flex;
   flex-direction: column;
 }
+
 #inputfront,
 #inputback {
   margin-right: 22px;
@@ -43,11 +48,13 @@ button {
   display: flex;
   align-items: center;
 }
+
 .body-app {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .input-card {
   display: flex;
   justify-content: center;
@@ -118,6 +125,7 @@ td,
 .del {
   cursor: pointer;
 }
+
 td,
 th {
   border: 1px solid #dddddd;
@@ -125,6 +133,7 @@ th {
   padding: 3px;
   height: 16px;
 }
+
 .Table-Header {
   display: flex;
   flex-direction: column;
@@ -135,13 +144,14 @@ th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
 #mytable {
   direction: rtl;
   table-layout: inherit;
   width: 100%;
 }
 
-#table-header-title{
+#table-header-title {
   margin: 0.4rem 0;
   text-align: center;
 }
@@ -210,11 +220,15 @@ input.input-Back {
   width: auto;
 }
 
-.FrontDiv p,.BackDiv p  {
+.FrontDiv p,
+.BackDiv p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.FrontDiv,.BackDiv,.edit-div {
+
+.FrontDiv,
+.BackDiv,
+.edit-div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,7 +236,8 @@ input.input-Back {
   width: auto;
 }
 
-.icons-Front,.icons-Back {
+.icons-Front,
+.icons-Back {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -241,6 +256,7 @@ input.input-Back {
   font-weight: 600;
   font-size: 22px;
 }
+
 .fa-rectangle-xmark:hover {
   color: #da0a0a;
   font-weight: 600;
@@ -266,107 +282,130 @@ input.input-Back {
   display: none;
 }
 
-.edit-mode-on,.Action-Div {
+.edit-mode-on,
+.Action-Div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.input-values{
+.input-values {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.all-btn{
+
+.all-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-#btn-save{
+
+#btn-save {
   background-color: #06b31d;
 }
-button#btn-save:hover{
-  background-color:aquamarine;
+
+button#btn-save:hover {
+  background-color: aquamarine;
 }
-#btn-clear{
-  background-color:darkgoldenrod;
+
+#btn-clear {
+  background-color: darkgoldenrod;
 }
-button#btn-clear:hover{
-  background-color:coral;
+
+button#btn-clear:hover {
+  background-color: coral;
 }
-.last-cards-body{
-display: flex;
-justify-content: center;
-align-items: center;
+
+.last-cards-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.header-tiltle{
+
+.header-tiltle {
   font-size: x-large;
   font-weight: bold;
 }
-.last-cards{
+
+.last-cards {
   flex-direction: column;
-  margin:0 1rem;
+  margin: 0 1rem;
 }
+
 .data-table {
   padding: 0 1rem;
 }
 
 /* Media Queries */
 @media screen and (max-width: 480px) {
-  #inputfront, #inputback {
-   width: initial; 
+
+  #inputfront,
+  #inputback {
+    width: 6rem;
   }
+
   .last-cards-body {
     flex-direction: column;
   }
-  body{
+
+  body {
     padding: 0 0.2rem;
   }
+
   .card {
-    width: 150px;
+    width: 120px;
     height: 35px;
   }
+
   .main-card .card {
-    height: 55px;
+    height: 45px;
   }
+
   .body-app {
     flex-direction: column;
   }
+
   .CardList {
-    width: 425px;
+    width: 320px;
     height: 200px;
     margin: 5px;
   }
+
   .header {
     margin: 0;
   }
+
   .input-lable {
     display: none;
   }
-  .title-last-card{
+
+  .title-last-card {
     font-size: 0.8rem;
   }
 
   .mode-all .main-card .card-front {
-    transform: translateY(15x) rotateX(10deg);
+    transform: translateY(30px) rotateX(10deg);
   }
-  
+
   .mode-all .main-card .card-back {
-    transform: translateY(-15px) rotateX(-10deg);
+    transform: translateY(-30px) rotateX(-10deg);
+  }
+
+  .data-table {
+    padding: 0, 0.2rem;
+  }
+
+  .last-cards {
+    margin: 0;
   }
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {}
 
-}
+@media screen and (max-width: 1024px) {}
 
-@media screen and (max-width: 1024px) {
-
-}
-
-@media screen and (max-width: 1280px) {
-
-}
+@media screen and (max-width: 1280px) {}
