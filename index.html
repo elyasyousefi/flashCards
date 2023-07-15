@@ -54,11 +54,19 @@
   </div>
 
   <div class="body-app">
+    <div class="main-card-container mode-front">
+      <div class="main-card flex-center ">
+        <div class="card card-front" id="main-front-card">
+          <p>Front Of Card</p>
+        </div>
+        <div class="card card-back" id="main-back-card">
+          <p>Back of Card</p>
+        </div>
+      </div>
+    </div>
     <div class="data-table">
       <!-- <div class="CardInfo"> -->
-      <div class="CardList">
         <div class="Table-Header">
-          <h3 id="table-header-title">Show cards info !</h3>
           <div class="showcolumn-div">
             <label id="input-label" for="showall">Show Both</label><br />
             <input onclick="selectMode('all') " type="radio" id="showall" name="ShowCardInfo" value="Show All" />
@@ -69,30 +77,20 @@
             <input onclick="selectMode('back')" type="radio" id="backshow" name="ShowCardInfo" value="Back" />
           </div>
         </div>
+      <div class="card-list">
         <table id="mytable" class="mode-front">
           <thead>
             <tr>
               <th>Action</th>
               <th>Id</th>
-              <th class="Front-class" id="Frontid">Front</th>
-              <th class="Back-class" id="Backid">Back</th>
+              <th class="front-class" id="Frontid">Front</th>
+              <th class="back-class" id="Backid">Back</th>
             </tr>
           </thead>
           <tbody>
             <tr></tr>
           </tbody>
         </table>
-      </div>
-    </div>
-    <!-- </div> -->
-    <div class="main-card-container mode-front">
-      <div class="main-card flex-center ">
-        <div class="card card-front">
-          <p>Front Of Card</p>
-        </div>
-        <div class="card card-back">
-          <p>Back of Card</p>
-        </div>
       </div>
     </div>
   </div>

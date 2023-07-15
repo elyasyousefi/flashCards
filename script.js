@@ -3,17 +3,24 @@ const CardsInfo = [];
 window.addEventListener("load", loadFromMemory);
 function loadFromMemory() {
   let data = JSON.parse(localStorage.getItem("memory"));
-  for (i = 0; i < data.length; i++) {
-    Addrow(data[i]);
+  if (data) {
+    for (let i = 0; i < data.length; i++) {
+      Addrow(data[i]);
+    }
+    return data;
   }
-  return data;
+  else {
+    return
+  }
 }
 
 // Show Last Data Entered In Last Cards Section
 function showLastcards() {
   document.getElementById("frontname").innerHTML =
+  document.getElementById("main-front-card").innerHTML =
     CardsInfo[CardsInfo.length - 1].cardfront;
   document.getElementById("backname").innerHTML =
+  document.getElementById("main-back-card").innerHTML =
     CardsInfo[CardsInfo.length - 1].cardback;
 }
 
@@ -76,7 +83,7 @@ function Addrow(data) {
   let ActionCell = Row.insertCell();
   ActionDiv = document.createElement("div");
   ActionCell.appendChild(ActionDiv);
-  ActionDiv.className = "Action-Div";
+  ActionDiv.className = "action-div";
   //
   let deleteIcon = document.createElement("i");
   deleteIcon.className = "fa-solid fa-trash-can";
@@ -108,11 +115,11 @@ function Addrow(data) {
   );
   FrontDiv = document.createElement("div");
   RowFront.appendChild(FrontDiv);
-  FrontDiv.className = "FrontDiv";
+  FrontDiv.className = "front-div";
   paragraphFront.appendChild(TextFront);
   FrontDiv.appendChild(paragraphFront);
-  paragraphFront.className = "Front-Paragraph";
-  RowFront.className = "Front-class";
+  paragraphFront.className = "front-paragraph";
+  RowFront.className = "front-class";
   //
   editFrontDiv = document.createElement("div");
   RowFront.appendChild(editFrontDiv);
@@ -121,7 +128,7 @@ function Addrow(data) {
   inputFront = document.createElement("input");
   editFrontDiv.appendChild(inputFront);
   inputFront.value = CardsInfo[CardsInfo.length - 1].cardfront;
-  inputFront.className = "input-Front";
+  inputFront.className = "input-front";
   inputFront.setAttribute('id', `${Math.random()}fontInput`);
 
 
@@ -135,15 +142,15 @@ function Addrow(data) {
     CardsInfo[CardsInfo.length - 1].cardback
   );
   RowBack.appendChild(TextBack);
-  RowBack.className = "Back-class";
+  RowBack.className = "back-class";
   paragraphBack = document.createElement("p");
   BackDiv = document.createElement("div");
   RowBack.appendChild(BackDiv);
-  BackDiv.className = "BackDiv";
+  BackDiv.className = "back-div";
   paragraphBack.appendChild(TextBack);
   BackDiv.appendChild(paragraphBack);
-  paragraphBack.className = "Back-Paragraph";
-  RowBack.className = "Back-class";
+  paragraphBack.className = "back-Paragraph";
+  RowBack.className = "back-class";
   //
   editBackDiv = document.createElement("div");
   RowBack.appendChild(editBackDiv);
@@ -152,7 +159,7 @@ function Addrow(data) {
   inputBack = document.createElement("input");
   editBackDiv.appendChild(inputBack);
   inputBack.value = CardsInfo[CardsInfo.length - 1].cardback;
-  inputBack.className = "input-Back";
+  inputBack.className = "input-back";
   inputBack.setAttribute('id', `${Math.random()}Input`);
 
   //
@@ -192,7 +199,7 @@ deleteRow.addEventListener("click", (e) => {
     return;
   }
   const row = e.target.closest("tr");
-  const frontvalue = row.querySelector(".Front-class").innerText;
+  const frontvalue = row.querySelector(".front-class").innerText;
 
   for (i = 0; i < CardsInfo.length; i++) {
     if (frontvalue == CardsInfo[i].cardfront) {
@@ -207,8 +214,8 @@ deleteRow.addEventListener("click", (e) => {
 const tbody = document.querySelector("#mytable tbody");
 tbody.addEventListener("click", (e) => {
   const row = e.target.closest("tr");
-  const back = row.querySelector(".Back-Paragraph");
-  const front = row.querySelector(".Front-Paragraph");
+  const back = row.querySelector(".back-Paragraph");
+  const front = row.querySelector(".front-paragraph");
   document.querySelector(".main-card .card-front").innerText = front.innerText;
   document.querySelector(".main-card .card-back").innerText = back.innerText;
 });
@@ -235,10 +242,8 @@ backCardEl.addEventListener("click", () => {
 });
 
 tbody.addEventListener("click", (e) => {
-  // e.target.closest(".input-Front").display="revert";
-
-  const selectInputFront = e.target.closest("tr").querySelector(".input-Front");
-  const selectInputBack = e.target.closest("tr").querySelector(".input-Back");
+  const selectInputFront = e.target.closest("tr").querySelector(".input-front");
+  const selectInputBack = e.target.closest("tr").querySelector(".input-back");
   const selectOkIcon = e.target.closest("tr").querySelector(".fa-square-check");
   const selectCancelIcon = e.target
     .closest("tr")
@@ -251,10 +256,10 @@ tbody.addEventListener("click", (e) => {
     .querySelector(".fa-pen-to-square");
   const selectFrontText = e.target
     .closest("tr")
-    .querySelector(" .Front-Paragraph");
+    .querySelector(" .front-paragraph");
   const selectBackText = e.target
     .closest("tr")
-    .querySelector(" .Back-Paragraph");
+    .querySelector(" .back-Paragraph");
 
   if (e.target.className == "fa-solid fa-pen-to-square") {
     selectInputFront.classList.add("edit-mode-on");
@@ -269,17 +274,17 @@ tbody.addEventListener("click", (e) => {
   if (e.target.className == "fa-regular fa-square-check edit-mode-on") {
     for (i = 0; i < CardsInfo.length; i++) {
       const row = e.target.closest("tr");
-      const frontvalue = row.querySelector(".Front-Paragraph").innerText;
+      const frontvalue = row.querySelector(".front-paragraph").innerText;
       if (frontvalue == CardsInfo[i].cardfront) {
         let NewCardinfo = {
-          cardfront: row.querySelector(".input-Front").value,
-          cardback: row.querySelector(".input-Back").value,
+          cardfront: row.querySelector(".input-front").value,
+          cardback: row.querySelector(".input-back").value,
         };
         CardsInfo[i].cardfront = NewCardinfo.cardfront;
         CardsInfo[i].cardback = NewCardinfo.cardback;
         localStorage.setItem("memory", JSON.stringify(CardsInfo)); // Save New Data
       }
-      
+
     }
     selectInputFront.classList.remove("edit-mode-on");
     selectInputBack.classList.remove("edit-mode-on");
@@ -289,10 +294,10 @@ tbody.addEventListener("click", (e) => {
     selectFrontText.classList.remove("edit-mode-off");
     selectBackText.classList.remove("edit-mode-off");
     selectDeleteIcon.classList.remove("edit-mode-off");
-    reload ();
+    reload();
   }
 
-  
+
   if (e.target.className == "fa-regular fa-rectangle-xmark edit-mode-on") {
     selectInputFront.classList.remove("edit-mode-on");
     selectInputBack.classList.remove("edit-mode-on");
@@ -302,10 +307,10 @@ tbody.addEventListener("click", (e) => {
     selectFrontText.classList.remove("edit-mode-off");
     selectBackText.classList.remove("edit-mode-off");
     selectDeleteIcon.classList.remove("edit-mode-off");
-    
+
   }
 });
 
-function reload (){
+function reload() {
   location.reload();
 }
