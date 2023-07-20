@@ -190,6 +190,10 @@ tr:nth-child(even) {
   perspective: 300px;
   transform-style: preserve-3d;
   position: relative;
+  padding-top: 1rem;
+}
+.main-card-container.mode-all {
+  padding-top: 4rem;
 }
 
 .main-card .card-front {
@@ -378,8 +382,11 @@ button#btn-clear:hover {
     width: 70vw;
 
   }
+  .main-card-container{
+    padding-top: 0;
+  }
 
-  .main-card-container .mode-all {
+  .main-card-container.mode-all {
     margin: 0.4rem;
   }
 
