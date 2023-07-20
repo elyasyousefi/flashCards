@@ -387,7 +387,7 @@ button#btn-clear:hover {
   }
 
   .main-card-container.mode-all {
-    margin: 0.4rem;
+    padding: 0;
   }
 
   .body-app {
